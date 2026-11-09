@@ -32,7 +32,9 @@
     <!-- Carlos empieza aquí. Se muestran solo los estudiantes que coinciden. -->
     @if (estudiantesFiltrados.length > 0) {
       @for (estudiante of estudiantesFiltrados; track estudiante.id) {
-        <div class="tarjeta-estudiante">
+        <!-- Luis empieza aquí. La clase editando resalta la tarjeta seleccionada. -->
+        <div class="tarjeta-estudiante" [class.editando]="idEditando === estudiante.id">
+          <!-- Luis termina aquí. -->
           <p><strong>Nombre:</strong> {{ estudiante.nombre }}</p>
           <p><strong>Correo:</strong> {{ estudiante.correo }}</p>
           <p><strong>Carrera:</strong> {{ estudiante.carrera }}</p>

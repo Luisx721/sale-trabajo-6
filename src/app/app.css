@@ -41,3 +41,10 @@ button:disabled {
   cursor: not-allowed;
 }
 /* Steven termina aquí. */
+
+/* Luis empieza aquí. El fondo y el borde indican cuál estudiante se está editando. */
+.tarjeta-estudiante.editando {
+  background-color: #fef3c7;
+  border: 2px solid #d97706;
+}
+/* Luis termina aquí. */

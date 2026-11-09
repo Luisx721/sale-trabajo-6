@@ -13,7 +13,9 @@ export class EstudianteService {
   }
 
   agregarEstudiante(est: Estudiante): void {
-    est.id = this.estudiantes.length + 1;
+    // Luis empieza aquí. Un identificador único evita resaltar dos tarjetas después de borrar y agregar.
+    est.id = this.estudiantes.reduce((mayor, estudiante) => Math.max(mayor, estudiante.id), 0) + 1;
+    // Luis termina aquí.
     this.estudiantes.push(est);
   }
 

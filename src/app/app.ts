@@ -40,9 +40,14 @@ private estudianteService = inject(EstudianteService);
     this.limpiarFormulario();
   }
 
+  // Luis empieza aquí. Se guarda el identificador de la tarjeta que se está editando.
+  idEditando: number | null = null;
+
   seleccionarParaEditar(estudiante: Estudiante) {
     this.nuevoEstudiante = { ...estudiante };
+    this.idEditando = estudiante.id;
   }
+  // Luis termina aquí.
 
   // Carlos empieza aquí. Cancelar la confirmación conserva al estudiante.
   eliminar(id: number) {
@@ -65,6 +70,9 @@ private estudianteService = inject(EstudianteService);
   // Brian termina aquí.
 
   limpiarFormulario() {
+    // Luis empieza aquí. Guardar, cancelar o borrar quita el resaltado de edición.
+    this.idEditando = null;
+    // Luis termina aquí.
     this.nuevoEstudiante = { id: 0, nombre: '', correo: '', carrera: '', telefono: '' };
   }
 }
