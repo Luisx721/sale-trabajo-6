@@ -24,6 +24,12 @@ export class EstudianteService {
     }
   }
 
+  // Brian empieza aquí. Se vacía el mismo arreglo para que la pantalla se actualice.
+  limpiarEstudiantes(): void {
+    this.estudiantes.splice(0, this.estudiantes.length);
+  }
+  // Brian termina aquí.
+
   eliminarEstudiante(id: number): void {
     const index = this.estudiantes.findIndex(e => e.id === id);
     if (index !== -1) {

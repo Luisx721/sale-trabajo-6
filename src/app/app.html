@@ -17,6 +17,10 @@
 
   <section class="contenido">
     <h2>Lista de Estudiantes</h2>
+    <!-- Brian empieza aquí. El total cuenta todos los registros aunque se use el buscador. -->
+    <p>Total de estudiantes: {{ estudiantes.length }}</p>
+    <button type="button" (click)="limpiarLista()" [disabled]="estudiantes.length === 0">Limpiar lista</button>
+    <!-- Brian termina aquí. -->
     <!-- Carlos empieza aquí. El texto del buscador actualiza la lista visible. -->
     <div>
       <label for="busqueda">Buscar estudiante:</label>

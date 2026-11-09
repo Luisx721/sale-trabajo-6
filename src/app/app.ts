@@ -56,6 +56,14 @@ private estudianteService = inject(EstudianteService);
   }
   // Carlos termina aquí.
 
+  // Brian empieza aquí. El botón vacía la lista y deja el formulario listo para registrar.
+  limpiarLista() {
+    this.estudianteService.limpiarEstudiantes();
+    this.limpiarFormulario();
+    this.textoBusqueda = '';
+  }
+  // Brian termina aquí.
+
   limpiarFormulario() {
     this.nuevoEstudiante = { id: 0, nombre: '', correo: '', carrera: '', telefono: '' };
   }
